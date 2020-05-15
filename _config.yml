@@ -17,8 +17,6 @@ urls:
       url : /shop
     - text: Contact Me
       url : /contact
-    - text: Get Started
-      url: /get-started
 
 # Edit these details
 
