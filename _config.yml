@@ -34,7 +34,7 @@ typewrite-text: 이 페이지는 현재 미완성입니다. 정보 업데이트 
 
 author_work_experiences:
             - company_name: Global Bridge
-              company_logo: google.png
+              company_logo: globalbridge.png
               company_url: http://globalbridge.co.kr/
               designation: Software Engineer
               description: Worked on computer vision and deep learning
@@ -42,11 +42,11 @@ author_work_experiences:
 
 
 author_education_details:
-              - college_logo: mit.png
+              - college_logo: sunykorea.png
                 college_name: SUNY KOREA
                 college_url: http://www.sunykorea.ac.kr/
                 college_degree: CS Engineer
-                description: Bachelor of Technology
+                description: Bachelor of Technology (Scheduled)
                 visibility: true
 
 author_project_details:
