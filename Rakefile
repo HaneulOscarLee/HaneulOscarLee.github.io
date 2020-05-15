@@ -1,11 +1,6 @@
 namespace :assets do
   task :precompile do
     puts `bundle exec jekyll build`
+    puts `bundle exec jekyll algolia`
   end
 end
-
-# Generate the site
-sh "bundle exec jekyll build"
-
-# Run Algolia 
-sh "bundle exec jekyll algolia"
