@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to deploy devlopr-jekyll Blog using Github Pages and Travis
+title: Second
 author: Sujay Kundu
 date: '2019-05-21 14:35:23 +0530'
 category:
