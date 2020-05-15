@@ -3,8 +3,8 @@ layout: post
 title: First
 author: Sujay Kundu
 date: '2019-05-22 14:35:23 +0530'
-category: guides
-summary: Use Siteleaf CMS for your devlopr jekyll blog
+category: tech
+summary: First
 thumbnail: siteleaf.jpg
 ---
 

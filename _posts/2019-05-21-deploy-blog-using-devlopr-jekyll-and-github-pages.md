@@ -3,10 +3,8 @@ layout: post
 title: Second
 author: Sujay Kundu
 date: '2019-05-21 14:35:23 +0530'
-category:
-        - guides
-        - tutorials
-summary: Deployment Guide for devlopr-jekyll blog using Github Pages and Travis CI
+category: tech
+summary: Second
 thumbnail: deploy-using-github-pages-and-travis.png
 ---
 
