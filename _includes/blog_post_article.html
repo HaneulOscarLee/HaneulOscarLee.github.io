@@ -37,10 +37,9 @@
     {{ content }}
   </div>
 
-  {%- if site.hyvor_talk_website_id -%}
+  {%- if site.disqus_shortname -%}
   <div class="comments">
-  {%- include hyvor_comments.html -%}
+  {% include blog_post_comments.html %}
   </div>
     {%- endif -%}
-      <div id="disqus_thread"></div>
 </article>
