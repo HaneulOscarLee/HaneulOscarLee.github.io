@@ -98,11 +98,11 @@ show_author_education_details: true
 
 # algolia search
 algolia:
-  application_id: ODIPXW4GM0
+  application_id: 77QA73FOKR
   index_name: blog_posts # You can replace that with whatever name you want
   files_to_exclude: []
   nodes_to_index: 'article'
-  search_only_api_key: 2754a5fc3b666b48a6cd83072c5dfc5b
+  search_only_api_key: 2e695b12239ae84e5b55b608533b8955
 
 # pagination of posts
 paginate: 4
