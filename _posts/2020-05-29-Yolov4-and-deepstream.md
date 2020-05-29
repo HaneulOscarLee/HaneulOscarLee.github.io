@@ -44,10 +44,6 @@ Backbone을 CSPDarkNet53, Neck을 SPP + PAN을 사용하여 성능과 속도면�
 
 
 
-그래서 Deepstream 5.0에서 YoloV4 모델을 사용할 수 있도록 코드를 수정하였습니다.
-
-
-
 
 <br><br><br>
 # ENG
@@ -74,11 +70,11 @@ And this post will be based on the [NGC Docker container](https://ngc.nvidia.com
 
 ## Yolo V4
 
-on April 23nd, 2020, YoloV4, lastest version of Yolo, released.
+on April 23nd, 2020, YoloV4, lastest version of Yolo released.
 
-Backbone을 CSPDarkNet53, Neck을 SPP + PAN을 사용하여 성능과 속도면에서 큰 향상을 거두었으며, 실제로 사용해본 결과 Bounding Box의 정확도 역시 상당히 향상되었습니다.
-자세한 내용은 [YoloV4 github repo](https://github.com/AlexeyAB/darknet)를 참고하시면 되며, 
-평소에 자주 참고하는 Hoya012님이 [논문 리뷰](https://hoya012.github.io/blog/yolov4/)를 해주셔서 링크를 같이 참조합니다. (This link is wrote in Korean.)
+Yolo V4 use CSPDarkNet53 as backbone, SPP+PAN as its neck.   
+As a result of my actual use, the accuracy of the Bounding Box has also improved considerably.
+You can see the detail on [YoloV4 github repo](https://github.com/AlexeyAB/darknet), and I attach additional link of Hoya012's [YoloV4 paper review](https://hoya012.github.io/blog/yolov4/). (This link is wrote in Korean)
 
 
 
