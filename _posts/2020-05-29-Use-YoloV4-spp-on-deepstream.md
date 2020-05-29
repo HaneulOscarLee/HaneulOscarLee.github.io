@@ -51,6 +51,34 @@ Activation function도 기존의 leakyReLU가 아닌 mish 로 수정되었습니
 
 yoloV3-spp [weights](https://pjreddie.com/media/files/yolov3-spp.weights) 와 [config](https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov3-spp.cfg) 파일을 우선 다운로드 합니다.
 
+
+##### 요구사항
+
+**Ubuntu 18.04**: 위 예제는 모두 Ubuntu 18.04버전에서 실행하였습니다. 이 외의 버전에서도 작동하는지는 확인하지 않았습니다.
+
+**nvidia-docker** 설치: [Nvidia-docker github](https://github.com/NVIDIA/nvidia-docker) 를 따라서 설치하면 됩니다.   
+
+**NVIDIA display driver version 440+**: 엔디비아 드라이버 (버전 440+)가 host컴퓨터에 설치되어 있어야합니다.   
+
+**Deepstream 이미지 pull**: docker pull nvcr.io/nvidia/deepstream:5.0-dp-20.04-devel 커멘트로 이미지를 pull합니다.   
+
+##### Docker 실행
+
+우선은 docker를 실행하기 전 host 터미널에서    
+```sh
+xhost +
+```
+를 실행합니다.   
+해당 명령어는 컴퓨터를 재 시작할때마다 해주어야 합니다.   
+
+그 후 컨테이너 생성을 해줍니다.    
+```sh
+docker run --gpus all -it --name 컨테이너_이름 -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --env="QT_X11_NO_MITSHM=1" --shm-size=1g --ulimit memlock=-1 --ulimit stack=67108864 -w /opt/nvidia/deepstream/deepstream-5.0  nvcr.io/nvidia/deepstream:5.0-dp-20.04-devel
+```
+host와 container 사이의 파일공유를 하고싶으면 `/tmp/.X11-unix` 폴더를 통해서 파일 공유를 할 수 있습니다   
+
+VS Code에서 작업하실 경우 `remote container` extension을 사용하시면 더욱 간편하게 파일공유 및 코드 수정을 할 수 있습니다.
+
 ##### 빌드
 
 올바른 CUDA 버전을 export해줍니다.    
@@ -109,6 +137,23 @@ This time, I will introduce how to use YoloV3-spp on deepstream because unfortun
 #### Adapting YoloV3-spp on Deepstream SDK 5.0
 
 Download yoloV4 [weights](https://pjreddie.com/media/files/yolov3-spp.weights) and [config](https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov3-spp.cfg) files
+
+##### Run docker
+
+At the host terminal, run the command below.
+```sh
+xhost +
+```
+This command should be run when the computer is restarted.
+
+After that, create docker container.
+```sh
+docker run --gpus all -it --name CONTAINER_NAME -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY --env="QT_X11_NO_MITSHM=1" --shm-size=1g --ulimit memlock=-1 --ulimit stack=67108864 -w /opt/nvidia/deepstream/deepstream-5.0  nvcr.io/nvidia/deepstream:5.0-dp-20.04-devel
+```
+Yon can share file between host and container with `/tmp/.X11-unix` folder.
+
+If you use VS Code, you can use `remote container` extension to share file and write code more easily.
+
 
 ##### Build
 
