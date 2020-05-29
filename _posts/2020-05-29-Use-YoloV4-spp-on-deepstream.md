@@ -8,7 +8,8 @@ summary: YOLOV3-spp and Deepstream SDK 5.0
 thumbnail: yolov3-spp.png
 ---
 
-### [See in KOR](#kor)
+### [See in KOR](#kor)   
+
 ### [See in ENG](#eng)
 
 
@@ -38,9 +39,9 @@ thumbnail: yolov3-spp.png
 2020년 4월 23일, Yolo의 새 버전 YoloV4가 새로 나왔습니다.
 
 Backbone을 CSPDarkNet53, Neck을 SPP + PAN을 사용하여 성능과 속도면에서 큰 향상을 거두었으며, 실제로 사용해본 결과 Bounding Box의 정확도 역시 상당히 향상되었습니다.   
-Activation function도 기존의 leakyReLU가 아닌 mish 로 수정되었습니다.
+Activation function도 기존의 leakyReLU가 아닌 mish 로 수정되었습니다.   
 자세한 내용은 [YoloV4 github repo](https://github.com/AlexeyAB/darknet)를 참고하시면 되며, 
-평소에 자주 참고하는 Hoya012님이 [논문 리뷰](https://hoya012.github.io/blog/yolov4/)를 해주셔서 링크를 같이 참조합니다. 
+평소에 자주 참고하는 Hoya012님이 [논문 리뷰](https://hoya012.github.io/blog/yolov4/)를 해주셔서 링크를 같이 참조합니다.    
 안타깝게도 Deepstream SDK 5.0에서는 아직 YoloV4를 지원하지 않기 때문에, YoloV4의 핵심 방법중 하나인 YoloV3-spp를 deepstream에서 사용하는 방법을 알아보겠습니다. 
 
 ----------
@@ -50,8 +51,8 @@ yoloV3-spp [weights](https://pjreddie.com/media/files/yolov3-spp.weights) 와 [c
 
 ##### 빌드
 
-올바른 CUDA 버전을 
-Export correct CUDA version (e.g. 10.2, 10.1) and make
+올바른 CUDA 버전을 export해줍니다.    
+NGC 컨테이너를 사용하셨다면 10.2 버전입니다.
 
 ```sh
 cd /opt/nvidia/deepstream/deepstream-5.0/sources/objectDetector_Yolo
@@ -97,8 +98,8 @@ And this post will be based on the [NGC Docker container](https://ngc.nvidia.com
 on April 23nd, 2020, YoloV4, lastest version of Yolo released.
 
 Yolo V4 use CSPDarkNet53 as backbone, SPP+PAN as its neck. 
-As a result of my actual use, the accuracy of the Bounding Box has also improved considerably.
-Activation function also changed to mish activation function not leakyReLU
+As a result of my actual use, the accuracy of the Bounding Box has also improved considerably.   
+Activation function also changed to mish activation function not leakyReLU.   
 You can see the detail on [YoloV4 github repo](https://github.com/AlexeyAB/darknet), and I attach additional link of Hoya012's [YoloV4 paper review](https://hoya012.github.io/blog/yolov4/). (This link is wrote in Korean)   
 This time, I will introduce how to use YoloV3-spp on deepstream because unfortunetly deepstream 5.0 does not support YoloV4.
 
@@ -109,7 +110,8 @@ Download yoloV4 [weights](https://pjreddie.com/media/files/yolov3-spp.weights) a
 
 ##### Build
 
-Export correct CUDA version (e.g. 10.2, 10.1) and make
+Export correct CUDA version (e.g. 10.2, 10.1) and make   
+If you use NGC container, the version is 10.2
 
 ```sh
 cd /opt/nvidia/deepstream/deepstream-5.0/sources/objectDetector_Yolo
