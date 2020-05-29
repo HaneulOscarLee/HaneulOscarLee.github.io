@@ -8,8 +8,8 @@ summary: YOLOV3-spp and Deepstream SDK 5.0
 thumbnail: yolov3-spp.png
 ---
 
-[See in KOR](#kor)
-[See in ENG](#eng)
+### [See in KOR](#kor)
+### [See in ENG](#eng)
 
 
 ## KOR
