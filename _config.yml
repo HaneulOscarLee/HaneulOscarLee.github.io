@@ -11,10 +11,10 @@ urls:
       url: /about
     - text: Blog
       url: /blog
-    - text: Gallery
-      url: /gallery
-    - text: Shop
-      url : /shop
+    # - text: Gallery
+    #   url: /gallery
+    # - text: Shop
+    #   url : /shop
     - text: Contact Me
       url : /contact
 
