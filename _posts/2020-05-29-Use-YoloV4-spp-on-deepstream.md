@@ -19,7 +19,7 @@ thumbnail: yolov3-spp.png
 ----------
 
 안녕하세요, 오스카입니다.   
-이번 포스트에서는 NVIDIA Deepstream SDK 5.0에서 YoloV3-spp를 사용
+이번 포스트에서는 NVIDIA Deepstream SDK 5.0에서 YoloV3-spp를 사용하여 예제를 실행하는 방법을 알아보겠습니다.
 
 #### Deepstream SDK 5.0
 
@@ -106,7 +106,7 @@ deepstream-app -c deepstream_app_config_yoloV3.txt
 ----------
 
 Hello, this is Oscar.   
-On this post, I will share How to use YoloV3-spp on Deepstream SDK 5.0
+On this post, I will share How to use YoloV3-spp on Deepstream SDK 5.0.
 
 #### Deepstream SDK 5.0
 
