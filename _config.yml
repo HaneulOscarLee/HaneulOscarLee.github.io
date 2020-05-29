@@ -3,8 +3,8 @@ subtitle: Personal Blog
 description: >- # this means to ignore newlines until "baseurl:"
   Lee's Personal Blog/ Portfolio
 
-url: "" # the base hostname & protocol for your site, e.g. https://example.github.io
-baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://haneuloscarlee.github.io" # the base hostname & protocol for your site, e.g. https://example.github.io
+baseurl: "https://haneuloscarlee.github.io" # the subpath of your site, e.g. /blog
 
 urls:
     - text: About Me
@@ -126,8 +126,8 @@ paginate_path: "/blog/page/:num/"
 #     category: '/category/:name/'
 
 # Shop
-collections:
- - products
+# collections:
+#  - products
 
 # Gallery
 defaults:
