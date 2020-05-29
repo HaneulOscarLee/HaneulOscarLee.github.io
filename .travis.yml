@@ -1,21 +1,13 @@
-language: java
-jdk:
-  - openjdk8
-
+language: ruby
+cache: bundler
+gemfile: Gemfile
+before_install:
+  - gem install bundler
+script:
+  - bundle exec jekyll algolia --config _config.yml
 branches:
   only:
+    # Change this to gh-pages if you're deploying using the gh-pages branch
     - master
-
-# Travis CI 서버의 Home
-cache:
-  directories:
-    - '$HOME/.m2/repository'
-    - '$HOME/.gradle'
-
-script: "./gradlew clean build"
-
-# CI 실행 완료시 메일로 알람
-notifications:
-  email:
-    recipients:
-      - 1017oscar@naver.com.com 
+rvm:
+ - 2.4
