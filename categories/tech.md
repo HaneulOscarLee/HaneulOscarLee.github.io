@@ -8,6 +8,14 @@ permalink: /blog/categories/tech
 
 <div class="card">
 {% for post in site.categories.tech %}
- <li class="category-posts"><span>{{ post.date | date_to_string }}</span> &nbsp; <a href="{{ post.url }}">{{ post.title }}</a></li>
+ {% if post.title != "ignore" %}
+  <li class="category-posts"><span>{{ post.date | date_to_string }}</span> &nbsp; <a href="{{ post.url }}">{{ post.title }}</a></li>
+ {% endif %}
 {% endfor %}
 </div>
+
+
+
+
+
+
