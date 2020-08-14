@@ -3,7 +3,7 @@ subtitle: Personal Blog
 description: >- # this means to ignore newlines until "baseurl:"
   Lee's Personal Blog/ Portfolio
 
-url: "" # the base hostname & protocol for your site, e.g. https://example.github.io
+url: "https://haneuloscarlee.github.io" # the base hostname & protocol for your site, e.g. https://example.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 
 urls:
@@ -11,10 +11,10 @@ urls:
       url: /about
     - text: Blog
       url: /blog
-    - text: Gallery
-      url: /gallery
-    - text: Shop
-      url : /shop
+    # - text: Gallery
+    #   url: /gallery
+    # - text: Shop
+    #   url : /shop
     - text: Contact Me
       url : /contact
 
@@ -26,7 +26,7 @@ author_bio: Hi, my name is Haneul Oscar Lee.
 author_email: "1017oscar@naver.com"
 author_location: South Korea
 #author_website_url: "http://johndoe.com"
-typewrite-text: 이 페이지는 현재 미완성입니다. 정보 업데이트 중 입니다.
+typewrite-text: 개인 블로그/포트폴리오 페이지 입니다.
 
 author_work_experiences:
             - company_name: Global Bridge
@@ -89,7 +89,7 @@ highlighter: rouge
 permalink: pretty
 
 # google analytics
-# google_analytics: UA-46783401-10
+google_analytics: UA-167985628-1
 
 # Choose what to show ( can be true or false)
 show_author_work_experiences: true
@@ -98,11 +98,11 @@ show_author_education_details: true
 
 # algolia search
 algolia:
-  application_id: ODIPXW4GM0
+  application_id: 77QA73FOKR
   index_name: blog_posts # You can replace that with whatever name you want
   files_to_exclude: []
   nodes_to_index: 'article'
-  search_only_api_key: 2754a5fc3b666b48a6cd83072c5dfc5b
+  search_only_api_key: 2e695b12239ae84e5b55b608533b8955
 
 # pagination of posts
 paginate: 4
@@ -126,8 +126,8 @@ paginate_path: "/blog/page/:num/"
 #     category: '/category/:name/'
 
 # Shop
-collections:
- - products
+# collections:
+#  - products
 
 # Gallery
 defaults:

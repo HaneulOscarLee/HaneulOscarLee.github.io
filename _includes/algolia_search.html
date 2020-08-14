@@ -40,22 +40,23 @@
         container: '#search-hits',
         templates: {
           item: function(hit) {
-            return `
-                        <div class="card blog-post">
-                            <img class="card-img-top" src="${ hit.thumbnail }" alt="${ hit.title }">
-                            <div class="card-body center">
-                                <img src="{{site.url}}{{site.baseurl}}/assets/img/{{ site.author_logo }}" class="author-profile-img">
-                                <h4 class="card-title">${ hit.title }</h4>
+            if (hit.type == "post"){
+              return `
+                          <div class="card blog-post">
+                              <img class="card-img-top" src="assets/img/posts/${ hit.thumbnail }" alt="${ hit.title }">
+                              <div class="card-body center">
+                                  <h4 class="card-title">${ hit.title }</h4>
 
-                                <h6 class="card-subtitle mb-2 text-muted">${moment.unix(hit.date).format('MMM D, YYYY')}</h6>
-                                <p class="card-text">${hit.summary }</p>
+                                  <h6 class="card-subtitle mb-2 text-muted">${moment.unix(hit.date).format('MMM D, YYYY')}</h6>
+                                  <p class="card-text">${hit.summary }</p>
 
-                                <a href="${hit.url}" data-disqus-identifier="${hit.url}" class="btn btn-secondary btn-sm">Read</a>
-                                <span class="disqus-comment-count" data-disqus-identifier="${ hit.url }"></span>
+                                  <a href="${hit.url}" data-disqus-identifier="${hit.url}" class="btn btn-outline-primary btn-sm">Read</a>
+                                  <span class="disqus-comment-count" data-disqus-identifier="${ hit.url }"></span>
 
-                            </div>
-                        </div>
-            `;
+                              </div>
+                          </div>
+              `;
+            }
           }
         }
       })
