@@ -13,10 +13,9 @@
 
         // set the blink speed of the cursor
         settings.blinkSpeed = 1000 / settings.blinkSpeed;
-
         // add cursor if set to true.
         if(settings.showCursor){
-            $(this).html('<span></span><span class="blinkingCursor">' + settings.cursor + '</span><span class="blinkingCursorInverse" style="display: none;"> </span>');
+            $(this).html('<span></span><span class="blinkingCursor" style="display: inline-block; width: 2px;">' + settings.cursor + '</span><span class="blinkingCursorInverse" style="display: none; display: inline-block; width: 2px;"> </span>');
             if(settings.blinkingCursor){
                 setInterval(function(){
                     $('.blinkingCursor').toggle();
