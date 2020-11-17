@@ -23,7 +23,7 @@
                 }, settings.blinkSpeed);
             }
         }else{
-            $(this).html('<span></span>');
+            $(this).html('<span> </span>');
         }
 
         // set the main element, not the span
