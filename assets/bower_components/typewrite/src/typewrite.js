@@ -16,14 +16,18 @@
 
         // add cursor if set to true.
         if(settings.showCursor){
-            $(this).html('<span></span><span class="blinkingCursor">' + settings.cursor + '</span>');
+            $(this).html('<span></span><span class="blinkingCursor">' + settings.cursor + '</span><span class="blinkingCursorInverse" style="display: none;"> </span>');
             if(settings.blinkingCursor){
                 setInterval(function(){
                     $('.blinkingCursor').toggle();
                 }, settings.blinkSpeed);
+
+                setInterval(function(){
+                    $('.blinkingCursorInverse').toggle();
+                }, settings.blinkSpeed);
             }
         }else{
-            $(this).html('<span> </span>');
+            $(this).html('<span></span>');
         }
 
         // set the main element, not the span
